@@ -1,0 +1,6 @@
+features:
+  - name: vscode
+    enabled: '{{ cookiecutter.vscode|lower }}'
+    resources:
+      - .devcontainer
+      - .vscode
