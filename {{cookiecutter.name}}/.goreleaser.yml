@@ -32,7 +32,7 @@ dockers:
     dockerfile: Dockerfile
     use: buildx
     image_templates:
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
     build_flag_templates:
       - '--platform=linux/amd64'
       - '--label=org.opencontainers.image.title={{ "{{ .ProjectName }}" }}'
@@ -45,7 +45,7 @@ dockers:
     dockerfile: Dockerfile
     use: buildx
     image_templates:
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
     build_flag_templates:
       - '--platform=linux/arm64'
       - '--label=org.opencontainers.image.title={{ "{{ .ProjectName }}" }}'
@@ -55,22 +55,22 @@ dockers:
       - '--label=org.opencontainers.image.source={{ "{{ .GitURL }}" }}'
 
 docker_manifests:
-  - name_template: '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:latest'
+  - name_template: '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:latest'
     image_templates:
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
-  - name_template: '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
+  - name_template: '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}'
     image_templates:
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
-  - name_template: '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:v{{ "{{ .Major }}" }}'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
+  - name_template: '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:v{{ "{{ .Major }}" }}'
     image_templates:
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
-  - name_template: '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:v{{ "{{ .Major }}" }}.{{ "{{ .Minor }}" }}'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
+  - name_template: '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:v{{ "{{ .Major }}" }}.{{ "{{ .Minor }}" }}'
     image_templates:
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
-      - '{{cookiecutter.org}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-amd64'
+      - '{{cookiecutter.org|lower}}/{{ "{{ .ProjectName }}" }}:{{ "{{ .Tag }}" }}-arm64'
 
 checksum:
   name_template: 'checksums.txt'
