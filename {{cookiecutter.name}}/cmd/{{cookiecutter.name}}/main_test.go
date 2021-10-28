@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	main "{{cookiecutter.vcs_root}}{{cookiecutter.org}}/{{cookiecutter.name}}/cmd/{{cookiecutter.name}}"
+	main "{{cookiecutter.vcs_root}}/{{cookiecutter.org}}/{{cookiecutter.name}}/cmd/{{cookiecutter.name}}"
 )
 
 func TestMain(t *testing.T) {

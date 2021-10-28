@@ -109,6 +109,9 @@ linters-settings:
   misspell:
     locale: US
 
+  goimports:
+    local-prefixes: {{cookiecutter.vcs_root}}/{{cookiecutter.org}}/{{cookiecutter.name}}
+
 issues:
   exclude-rules:
     - path: _test\.go
