@@ -91,7 +91,7 @@ linters:
     - staticcheck
     - structcheck
     - stylecheck
-    - tagliatelle
+    # - tagliatelle
     - testpackage
     - thelper
     - tparallel
