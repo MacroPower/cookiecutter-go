@@ -40,3 +40,8 @@ test: ## Tests Go code.
 test:
 	@echo ">> running unit tests"
 	@$(GO) test $(FILES_TO_TEST);
+
+.PHONY: go-build
+go-build: ## Creates a new Go build.
+go-build: $(GORELEASER)
+	$(GORELEASER) build --snapshot --rm-dist

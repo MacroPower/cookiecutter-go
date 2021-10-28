@@ -1,5 +1,6 @@
 {
-  "vcs_root": "github.com/MacroPower",
+  "vcs_root": "github.com",
+  "org": "MacroPower",
   "name": "my_project",
   "go_version": "1.17",
   "vscode": "n"

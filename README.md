@@ -6,6 +6,7 @@ A [Cookiecutter](https://github.com/cookiecutter/cookiecutter) for my Go project
 
 - [bingo](https://github.com/bwplotka/bingo)
 - [golangci](https://golangci-lint.run)
+- [goreleaser](https://goreleaser.com)
 
 ## Thanks
 
