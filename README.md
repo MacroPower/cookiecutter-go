@@ -2,11 +2,18 @@
 
 A [Cookiecutter](https://github.com/cookiecutter/cookiecutter) for my Go projects.
 
-## Uses
+Features:
 
-- [bingo](https://github.com/bwplotka/bingo)
-- [golangci](https://golangci-lint.run)
-- [goreleaser](https://goreleaser.com)
+- Configured linter (using [golangci](https://golangci-lint.run)).
+- Development dependency handling (using [bingo](https://github.com/bwplotka/bingo)).
+- Build and release automation (using [goreleaser](https://goreleaser.com)).
+- Benchmarks (using [benchstat](https://pkg.go.dev/golang.org/x/perf/cmd/benchstat)).
+- Makefile with help, format, lint, test, bench, and build targets.
+
+Optional features:
+
+- **gh_actions**: Enable to create GitHub Actions.
+- **vscode**: Enable to create VS Code launch and container config.
 
 ## Thanks
 
