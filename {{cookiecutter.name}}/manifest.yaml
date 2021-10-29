@@ -4,3 +4,8 @@ features:
     resources:
       - .devcontainer
       - .vscode
+
+  - name: gh_actions
+    enabled: '{{ cookiecutter.gh_actions|lower }}'
+    resources:
+      - .github/workflows
