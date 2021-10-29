@@ -15,6 +15,21 @@ Optional features:
 - **gh_actions**: Enable to create GitHub Actions.
 - **vscode**: Enable to create VS Code launch and container config.
 
+## Contributing
+
+Please feel free to submit issues and/or PRs with fixes or updates. However,
+note that this repo represents my personal standards and opinions. I will not
+accept anything that I don't agree with or that I think I will not personally
+use, even if it's an optional feature.
+
+This is purely to make this Cookiecutter no more complex than I personally need
+it to be.
+
+If you would like to contribute something that you're not sure about or think
+might be divisive, please just ask about it in an issue and we can talk about
+it. Or, if you want it just for yourself, fork the repo and do whatever you'd
+like!
+
 ## Thanks
 
 Some inspiration & snippets were taken from the following projects:
