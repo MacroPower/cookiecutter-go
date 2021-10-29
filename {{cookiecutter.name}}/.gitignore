@@ -16,3 +16,8 @@
 
 # Dependency directories
 vendor/
+
+# Editor
+.vscode/
+.devcontainer/
+.idea/
