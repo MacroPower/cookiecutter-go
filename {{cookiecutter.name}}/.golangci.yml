@@ -33,7 +33,7 @@ linters:
     # Sorted alphabetically.
     - asciicheck
     - bodyclose
-    - cyclop
+    # - cyclop
     - deadcode
     # - depguard
     - dogsled
@@ -47,7 +47,7 @@ linters:
     - exportloopref
     # - forbidigo
     - forcetypeassert
-    - funlen
+    # - funlen
     - gci
     - gochecknoglobals
     - gochecknoinits
