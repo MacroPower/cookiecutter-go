@@ -1,11 +1,11 @@
 features:
   - name: vscode
-    enabled: '{{ cookiecutter.vscode|lower }}'
+    enabled: '{{ cookiecutter.use_vscode|lower }}'
     resources:
       - .devcontainer
       - .vscode
 
   - name: gh_actions
-    enabled: '{{ cookiecutter.gh_actions|lower }}'
+    enabled: '{{ cookiecutter.use_gh_actions|lower }}'
     resources:
       - .github/workflows

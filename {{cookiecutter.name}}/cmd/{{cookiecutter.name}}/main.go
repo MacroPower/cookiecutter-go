@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 	"io"
-	"strings"{% if cookiecutter.kong|lower == "y" %}
+	"strings"{% if cookiecutter.use_kong|lower == "y" %}
 
-	{% endif %}{% if cookiecutter.kong|lower == "y" %}"github.com/alecthomas/kong"{% endif %}
+	{% endif %}{% if cookiecutter.use_kong|lower == "y" %}"github.com/alecthomas/kong"{% endif %}
 )
-{% if cookiecutter.kong|lower == "y" %}
+{% if cookiecutter.use_kong|lower == "y" %}
 var cli struct {
 	Log struct {
 		Level  string `help:"Log level." default:"info"`
@@ -16,7 +16,7 @@ var cli struct {
 }
 {% endif %}
 func main() {
-	{% if cookiecutter.kong|lower == "y" %}cliCtx := kong.Parse(&cli, kong.Name("{{cookiecutter.name}}"))
+	{% if cookiecutter.use_kong|lower == "y" %}cliCtx := kong.Parse(&cli, kong.Name("{{cookiecutter.name}}"))
 
 	{% endif %}sb := strings.Builder{}
 	Hello(&sb)

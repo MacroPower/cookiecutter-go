@@ -12,9 +12,9 @@ Features:
 
 Optional features:
 
-- **gh_actions**: Enable to create GitHub Actions.
-- **vscode**: Enable to create VS Code launch and container config.
-- **kong**: Enable to add [Kong](https://github.com/alecthomas/kong) command-line parser.
+- **use_gh_actions**: Enable to create GitHub Actions.
+- **use_vscode**: Enable to create VS Code launch and container config.
+- **use_kong**: Enable to add [Kong](https://github.com/alecthomas/kong) command-line parser.
 
 ## Coming soon
 

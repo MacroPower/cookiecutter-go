@@ -3,7 +3,7 @@
   "org": "MacroPower",
   "name": "my_project",
   "go_version": "1.17",
-  "gh_actions": "n",
-  "vscode": "n",
-  "kong": "n"
+  "use_gh_actions": "n",
+  "use_vscode": "n",
+  "use_kong": "n"
 }
