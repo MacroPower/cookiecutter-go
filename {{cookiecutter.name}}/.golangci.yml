@@ -48,16 +48,16 @@ linters:
     # - forbidigo
     - forcetypeassert
     # - funlen
-    - gci
-    - gochecknoglobals
-    - gochecknoinits
+    # - gci
+    # - gochecknoglobals
+    # - gochecknoinits
     # - gocognit
     - goconst
     - gocritic
     # - gocyclo
     - godot
     - godox
-    - goerr113
+    # - goerr113
     - gofmt
     - gofumpt
     - goheader
@@ -103,7 +103,7 @@ linters:
     - wastedassign
     - whitespace
     - wrapcheck
-    - wsl
+    # - wsl
 
 linters-settings:
   misspell:
