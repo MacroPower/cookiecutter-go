@@ -9,3 +9,8 @@ features:
     enabled: '{{ cookiecutter.use_gh_actions|lower }}'
     resources:
       - .github/workflows
+
+  - name: gokit_log
+    enabled: '{{ cookiecutter.use_gokit_log|lower }}'
+    resources:
+      - internal/log
