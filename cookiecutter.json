@@ -4,5 +4,6 @@
   "name": "my_project",
   "go_version": "1.17",
   "gh_actions": "n",
-  "vscode": "n"
+  "vscode": "n",
+  "kong": "n"
 }

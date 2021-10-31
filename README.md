@@ -14,12 +14,13 @@ Optional features:
 
 - **gh_actions**: Enable to create GitHub Actions.
 - **vscode**: Enable to create VS Code launch and container config.
+- **kong**: Enable to add [Kong](https://github.com/alecthomas/kong) command-line parser.
 
 ## Coming soon
 
 - More sensible linter configuration.
 - Version handling (waiting on Go 1.18).
-- Optional log and flag features via [go-kit/log](https://github.com/go-kit/log) and [Kong](https://github.com/alecthomas/kong).
+- Optional logging via [go-kit/log](https://github.com/go-kit/log).
 - Optional Prometheus collector.
 - Store and compare benchmarks via [benchdiff](https://github.com/WillAbides/benchdiff).
 
