@@ -31,9 +31,9 @@ build: go-build
 
 .PHONY: go-format
 go-format: ## Formats Go code including imports.
-go-format: $(GOIMPORTS)
+go-format: $(GOIMPORTS) $(GOFUMPT)
 	@echo ">> formatting Go code"
-	@gofmt -s -w $(FILES_TO_FMT)
+	@$(GOFUMPT) -s -w $(FILES_TO_FMT)
 	@$(GOIMPORTS) -w $(FILES_TO_FMT)
 
 .PHONY: go-lint
