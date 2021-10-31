@@ -33,9 +33,9 @@ linters:
     # Sorted alphabetically.
     - asciicheck
     - bodyclose
-    # - cyclop
+    # - cyclop # Disabled length/complexity linters.
     - deadcode
-    # - depguard
+    # - depguard # Enable with settings for required guards.
     - dogsled
     - dupl
     - durationcheck
@@ -43,28 +43,28 @@ linters:
     - errname
     - errorlint
     - exhaustive
-    # - exhaustivestruct
+    # - exhaustivestruct # Enable for certain files if needed.
     - exportloopref
-    # - forbidigo
+    # - forbidigo # Enable with settings for required guards.
     - forcetypeassert
-    # - funlen
-    # - gci
-    # - gochecknoglobals
-    # - gochecknoinits
-    # - gocognit
+    # - funlen # Disabled length/complexity linters.
+    # - gci # Using goimports instead.
+    # - gochecknoglobals # Useful in some cases.
+    # - gochecknoinits # Useful in some cases.
+    # - gocognit # Disabled length/complexity linters.
     - goconst
     - gocritic
-    # - gocyclo
+    # - gocyclo # Disabled length/complexity linters.
     - godot
     - godox
-    # - goerr113
+    # - goerr113 # No way to feasibly follow this in many cases.
     # - gofmt # Using gofumpt instead.
     - gofumpt
     - goheader
     - goimports
     - gomnd
     - gomoddirectives
-    # - gomodguard
+    # - gomodguard # Enable with settings for required guards.
     - goprintffuncname
     - gosec
     - gosimple
@@ -91,7 +91,7 @@ linters:
     - staticcheck
     - structcheck
     - stylecheck
-    # - tagliatelle
+    # - tagliatelle # Enable if standards are known.
     - testpackage
     - thelper
     - tparallel
@@ -103,7 +103,7 @@ linters:
     - wastedassign
     - whitespace
     - wrapcheck
-    # - wsl
+    # - wsl # Way too annoying to deal with.
 
 linters-settings:
   misspell:
