@@ -17,6 +17,11 @@ Optional features:
 - **use_kong**: Enable to add [Kong](https://github.com/alecthomas/kong) command-line parser.
 - **use_gokit_log**: Enable to add [go-kit/log](https://github.com/go-kit/log) logger.
 
+## Setup
+
+- Run `cookiecutter` to create a new project.
+- Run `go mod tidy` to add indirect dependencies and generate `go.sum`.
+
 ## Coming soon
 
 - More sensible linter configuration.
