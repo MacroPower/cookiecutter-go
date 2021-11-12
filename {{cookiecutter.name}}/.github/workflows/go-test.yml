@@ -1,0 +1,31 @@
+name: go-test
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - master
+      - main
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        go-version: ['{{cookiecutter.go_version}}.x']
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Run Go test
+        run: go test -json -race ./... > test.json
+
+      - name: Annotate Go tests
+        if: always()
+        uses: guyarb/golang-test-annotations@v0.5.0
+        with:
+          test-results: test.json
