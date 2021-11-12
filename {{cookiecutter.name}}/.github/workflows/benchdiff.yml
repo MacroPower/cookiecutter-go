@@ -1,0 +1,38 @@
+name: benchdiff
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - master
+      - main
+  pull_request:
+
+jobs:
+  benchdiff:
+    name: bench
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '{{cookiecutter.go_version}}'
+
+      - name: Run benchdiff
+        uses: WillAbides/benchdiff-action@v0
+        with:
+          benchdiff_version: 0.6.2
+          status_sha: ${{ "{{ github.sha }}" }}
+          status_name: text-bench-result
+          status_on_degraded: neutral
+          benchdiff_args: |
+            --cpu=1,2
+            --count=5
+            --warmup-count=1
+            --tolerance=30
+            --benchmem
+            --debug

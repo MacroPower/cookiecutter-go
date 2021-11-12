@@ -7,7 +7,7 @@ Features:
 - Configured linter (using [golangci](https://golangci-lint.run)).
 - Development dependency handling (using [bingo](https://github.com/bwplotka/bingo)).
 - Build and release automation (using [goreleaser](https://goreleaser.com)).
-- Benchmarks (using [benchstat](https://pkg.go.dev/golang.org/x/perf/cmd/benchstat)).
+- Benchmarks (using [benchstat](https://pkg.go.dev/golang.org/x/perf/cmd/benchstat) and [benchdiff](https://github.com/WillAbides/benchdiff)).
 - Makefile with help, format, lint, test, bench, and build targets.
 
 Optional features:
@@ -22,7 +22,6 @@ Optional features:
 - More sensible linter configuration.
 - Version handling (waiting on Go 1.18).
 - Optional Prometheus collector.
-- Store and compare benchmarks via [benchdiff](https://github.com/WillAbides/benchdiff).
 
 ## Contributing
 
