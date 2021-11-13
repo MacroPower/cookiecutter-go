@@ -53,3 +53,11 @@ $(GORELEASER): $(BINGO_DIR)/goreleaser.mod
 	@echo "(re)installing $(GOBIN)/goreleaser-v0.183.0"
 	@cd $(BINGO_DIR) && $(GO) build -mod=mod -modfile=goreleaser.mod -o=$(GOBIN)/goreleaser-v0.183.0 "github.com/goreleaser/goreleaser"
 
+{% if cookiecutter.use_gh_actions|lower == "y" -%}
+GOTEST2ACTION := $(GOBIN)/gotest2action-v0.0.0
+$(GOTEST2ACTION): $(BINGO_DIR)/gotest2action.mod
+	@# Install binary/ries using Go 1.14+ build command. This is using bwplotka/bingo-controlled, separate go module with pinned dependencies.
+	@echo "(re)installing $(GOBIN)/gotest2action-v0.0.0"
+	@cd $(BINGO_DIR) && $(GO) build -mod=mod -modfile=gotest2action.mod -o=$(GOBIN)/gotest2action-v0.0.0 "github.com/willabides/go-test2action/cmd/gotest2action"
+
+{% endif -%}

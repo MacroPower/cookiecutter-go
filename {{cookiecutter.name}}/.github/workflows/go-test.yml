@@ -21,10 +21,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Go test
-        run: go test -json -race ./... > test.json
-
-      - name: Annotate Go tests
-        if: always()
-        uses: guyarb/golang-test-annotations@v0.5.0
-        with:
-          test-results: test.json
+        run: make go-test-action

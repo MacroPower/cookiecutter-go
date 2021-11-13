@@ -48,6 +48,16 @@ go-test:
 	@echo ">> running Go tests"
 	@$(GO) test -race $(FILES_TO_TEST);
 
+{% if cookiecutter.use_gh_actions|lower == "y" -%}
+.PHONY: go-test-action
+go-test-action:
+go-test-action: $(GOTEST2ACTION)
+	$(GO) test -race -covermode=atomic -json $(FILES_TO_TEST) | $(GOTEST2ACTION) \
+		--passthrough \
+		--root-pkg {{cookiecutter.vcs_root}}/{{cookiecutter.org}}/{{cookiecutter.name}}
+
+{% endif -%}
+
 .PHONY: go-bench
 go-bench: ## Benchmarks Go code.
 go-bench: $(BENCHSTAT)

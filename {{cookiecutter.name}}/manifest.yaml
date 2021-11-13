@@ -9,6 +9,7 @@ features:
     enabled: '{{ cookiecutter.use_gh_actions|lower }}'
     resources:
       - .github/workflows
+      - .bingo/gotest2action.mod
 
   - name: gokit_log
     enabled: '{{ cookiecutter.use_gokit_log|lower }}'
