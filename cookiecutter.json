@@ -2,6 +2,7 @@
   "vcs_root": "github.com",
   "org": "MacroPower",
   "name": "my_project",
+  "default_branch": "main",
   "go_version": "1.17",
   "use_gh_actions": "n",
   "use_vscode": "n",

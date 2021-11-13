@@ -5,8 +5,7 @@ on:
     tags:
       - '*'
     branches:
-      - master
-      - main
+      - '{{cookiecutter.default_branch}}'
   pull_request:
 
 jobs:
